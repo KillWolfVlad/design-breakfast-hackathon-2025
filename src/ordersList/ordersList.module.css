@@ -1,0 +1,40 @@
+.wrapper {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.th {
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1f4f6f;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: #f4f6f8;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.td {
+    padding: 14px 16px;
+    font-size: 15px;
+    color: #1f2937;
+    border-bottom: 1px solid #eef0f2;
+    white-space: nowrap;
+}
+
+.link {
+    color: #1f4f6f;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.phonePrefix {
+    color: #9ca3af;
+    margin-right: 4px;
+}

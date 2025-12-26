@@ -93,7 +93,7 @@ export const loadTestData = (): OrderDto[] => {
             merchantName: 'Текс',
             carrierName: 'My Little Pony Express',
             clientName: 'Батько А.Г.',
-            phoneNumber: "'3759657528833",
+            phoneNumber: '3759657528833',
             status: 'Оплачен',
             shipmentDate: '2018-12-28',
             deliveryDate: '2018-12-31'
