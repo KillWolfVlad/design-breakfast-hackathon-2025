@@ -1,4 +1,5 @@
 import { useMemo, useState, type ReactNode } from 'react';
+import { PhoneCell } from '../phoneCell/phoneCell';
 import type { OrderDto } from '../orders/orderDto';
 import styles from './ordersList.module.css';
 
@@ -103,24 +104,21 @@ export const OrdersList = (props: OrdersListProps): ReactNode => {
                         <th className={`${styles.th} ${styles.link}`} onClick={onShipmentDateClick}>
                             Отгрузка
                         </th>
-                        <th className={styles.th}>Дост. план.</th>
+                        <th className={styles.th}>Дост.&nbsp;план.</th>
                         <th className={styles.th}>Статус</th>
                     </tr>
                 </thead>
                 <tbody>
                     {orders.map(order => (
                         <tr key={order.id}>
-                            <td className={`${styles.td} ${styles.link}`}>{order.id}</td>
+                            <td className={`${styles.td}`}>{order.id}</td>
                             <td className={styles.td}>{order.from}</td>
                             <td className={styles.td}>{order.to}</td>
                             <td className={styles.td}>{order.merchantName}</td>
                             <td className={styles.td}>{order.carrierName}</td>
                             <td className={styles.td}>{order.clientName}</td>
-                            <td className={styles.td}>
-                                <span className={styles.phonePrefix}>+</span>
-                                {order.phoneNumber}
-                            </td>
-                            <td className={`${styles.td} ${styles.link}`}>{order.shipmentDate.toLocaleDateString()}</td>
+                            <PhoneCell phoneNumber={order.phoneNumber} />
+                            <td className={`${styles.td}`}>{order.shipmentDate.toLocaleDateString()}</td>
                             <td className={styles.td}>{order.deliveryDate.toLocaleDateString()}</td>
                             <td className={styles.td}>{order.status}</td>
                         </tr>
